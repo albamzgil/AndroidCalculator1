@@ -7,13 +7,19 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/Pantalla"
+        android:id="@+id/resultado"
         android:layout_width="350dp"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp"
         android:background="#DDDDDD"
+        android:gravity="center"
         android:shadowColor="#FFFFFF"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="34sp"
         android:visibility="visible"
         app:drawableTint="#BABABA"
         app:layout_constraintBottom_toTopOf="@+id/cos"
@@ -23,136 +29,145 @@
         app:layout_constraintVertical_bias="0.48000002" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/uno"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:onClick="onClick"
+        android:onClick="onClick1"
         android:text="1"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Pantalla"
+        app:layout_constraintStart_toStartOf="@+id/resultado"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.73"
         app:rippleColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/dos"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick2"
         android:text="2"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
         app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/button1"
-        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintBottom_toBottomOf="@+id/uno"
+        app:layout_constraintStart_toEndOf="@+id/uno"
         app:rippleColor="#050505" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick3"
         android:text="3"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintBottom_toBottomOf="@+id/dos"
+        app:layout_constraintStart_toEndOf="@+id/dos" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/cuatro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick4"
         android:text="4"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="@+id/button1" />
+        app:layout_constraintBottom_toTopOf="@+id/uno"
+        app:layout_constraintStart_toStartOf="@+id/uno" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/cinco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick5"
         android:text="5"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
+        app:layout_constraintBottom_toTopOf="@+id/dos"
+        app:layout_constraintStart_toEndOf="@+id/cuatro" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/seis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick6"
         android:text="6"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        app:layout_constraintBottom_toTopOf="@+id/tres"
+        app:layout_constraintStart_toEndOf="@+id/cinco" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/siete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick7"
         android:text="7"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4" />
+        app:layout_constraintBottom_toTopOf="@+id/cuatro"
+        app:layout_constraintStart_toStartOf="@+id/cuatro" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/ocho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick8"
         android:text="8"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintBottom_toTopOf="@+id/cinco"
+        app:layout_constraintStart_toEndOf="@+id/siete" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/nueve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick9"
         android:text="9"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintStart_toEndOf="@+id/button8" />
+        app:layout_constraintBottom_toTopOf="@+id/seis"
+        app:layout_constraintStart_toEndOf="@+id/ocho" />
 
     <Button
-        android:id="@+id/button0"
+        android:id="@+id/cero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#AFF6FF"
+        android:onClick="onClick0"
         android:text="0"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="@+id/dos"
+        app:layout_constraintTop_toBottomOf="@+id/dos" />
 
     <Button
         android:id="@+id/clear"
@@ -164,8 +179,8 @@
         android:text="C"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintEnd_toStartOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintEnd_toStartOf="@+id/cero"
+        app:layout_constraintTop_toBottomOf="@+id/uno" />
 
     <Button
         android:id="@+id/igual"
@@ -177,8 +192,8 @@
         android:text="="
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintStart_toEndOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/cero"
+        app:layout_constraintTop_toBottomOf="@+id/tres" />
 
     <Button
         android:id="@+id/suma"
@@ -186,6 +201,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:background="#AFF6FF"
+        android:onClick="operation"
         android:text="+"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
@@ -200,12 +216,13 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="operation"
         android:text="-"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
         app:layout_constraintBottom_toTopOf="@+id/suma"
         app:layout_constraintEnd_toEndOf="@+id/mult"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/tres" />
 
     <Button
         android:id="@+id/mult"
@@ -214,26 +231,28 @@
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="operation"
         android:text="x"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
         app:layout_constraintBottom_toTopOf="@+id/resta"
-        app:layout_constraintEnd_toEndOf="@+id/button16"
-        app:layout_constraintStart_toEndOf="@+id/button6" />
+        app:layout_constraintEnd_toEndOf="@+id/div"
+        app:layout_constraintStart_toEndOf="@+id/seis" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/div"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:background="#AFF6FF"
+        android:onClick="operation"
         android:text="/"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
         app:layout_constraintBottom_toTopOf="@+id/mult"
-        app:layout_constraintEnd_toEndOf="@+id/Pantalla"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        app:layout_constraintEnd_toEndOf="@+id/resultado"
+        app:layout_constraintStart_toEndOf="@+id/nueve" />
 
     <Button
         android:id="@+id/tan"
@@ -257,7 +276,7 @@
         android:text="cos"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/ocho"
         app:layout_constraintStart_toEndOf="@+id/sin" />
 
     <Button
@@ -269,6 +288,6 @@
         android:text="sin"
         android:textColor="#000000"
         app:backgroundTint="#AFF6FF"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7" />
+        app:layout_constraintBottom_toTopOf="@+id/siete"
+        app:layout_constraintStart_toStartOf="@+id/siete" />
 </androidx.constraintlayout.widget.ConstraintLayout>
